@@ -9,9 +9,6 @@ multiply=3
 divide=4;
 modulus=5;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ---
 --The main function which is to be called by outside modules
 --@param first The first argument to the calculator
@@ -69,6 +66,5 @@ function calculate(first,second,operator)
   else
     error("Operator not found!");
   end
->>>>>>> origin/functionality
 end
 
