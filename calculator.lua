@@ -10,6 +10,7 @@ divide=4;
 modulus=5;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ---
 --The main function which is to be called by outside modules
@@ -26,17 +27,48 @@ end
 
 --Helper functions so as to not be trapped by one implementation
 
-function add_cal(first,second)
+local function add_cal(first,second)
+  return first+second;
 end
 
-function subtract_cal(first,second)
+local function subtract_cal(first,second)
+  return first-second;
 end
 
-function multiply_cal(first,second)
+local function multiply_cal(first,second)
+  return first*second;
 end
 
-function divide_cal(first,second)
+local function divide_cal(first,second)
+  if second==0 then
+    error("Cannot divide by zero foo");
+  else
+    return first/second;
+  end
 end
 
-function modulus_cal(first,second)
+local function modulus_cal(first,second)
+  if second==0 then
+    error("Cannot divide by zero foo");
+  else
+    return first%second;
+  end
 end
+
+function calculate(first,second,operator)
+  if operator==add then
+    return add_cal(first,second);
+  elseif operator==subtract then
+    return subtract_cal(first,second);
+  elseif operator==multiply then
+    return multiply_cal(first,second);
+  elseif operator==divide then
+    return divide_cal(first,second);
+  elseif operator==modulus then
+    return modulus_cal(first,second);
+  else
+    error("Operator not found!");
+  end
+>>>>>>> origin/functionality
+end
+
